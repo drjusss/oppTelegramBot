@@ -2,7 +2,7 @@ import typing
 import telebot
 import threading
 
-
+import decorators
 from credentials import bot, RECEIVER_CHAT_ID
 from telebot.types import InputMediaDocument, InputMediaAudio, InputMediaPhoto, InputMediaVideo
 
@@ -26,6 +26,7 @@ def start_task(delay: int, username: str) -> None:
     user_timers[username] = timer
 
 
+@decorators.log_error   # логируем, потому что функция запускается в отдельном потоке
 def check_timeout_and_send_notification(username: str) -> None:
     messages = user_messages.get(username, list())
     if len(messages) < 1:
@@ -176,3 +177,6 @@ def create_messages_packs(messages: list[telebot.types.Message]) -> dict:
         structured_message['audio'].append(audio_pack)
 
     return structured_message
+
+
+
