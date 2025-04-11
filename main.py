@@ -1,8 +1,8 @@
 import telebot
 
-import decorators
 from utils import user_messages, start_task
 from credentials import bot, RECEIVER_CHAT_ID, ALLOWED_CONTENT_TYPES
+import decorators
 
 
 @bot.message_handler(commands=['help', 'start'])
