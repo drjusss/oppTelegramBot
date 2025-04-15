@@ -11,7 +11,7 @@ def send_welcome(message: telebot.types.Message) -> None:
     bot.reply_to(message=message, text='Привет, я бот поддержки учеников. Вы можете отправить мне сообщение, которое я отправлю инженерам, чтобы с вами оперативно связались.')
 
 
-@bot.message_handler(func=lambda message: message.chat.id != RECEIVER_CHAT_ID, content_types=ALLOWED_CONTENT_TYPES)
+@bot.message_handler(func=lambda message: message.chat.id == RECEIVER_CHAT_ID, content_types=ALLOWED_CONTENT_TYPES)
 @decorators.log_error
 def handle_appeals(message: telebot.types.Message) -> None:
     print(message.chat.id)

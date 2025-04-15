@@ -6,12 +6,12 @@ import urllib3
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
 # test_config
-# API_TOKEN = '7478300229:AAHLO4zspS8IqyrmvCdqwTxLFVlR0lUIJmg'
+# API_TOKEN = '7478300229:AAE564apvxMdwm0kJF13M3chNpt7FsMewwY'
 # RECEIVER_CHAT_ID = 865222212
 
 # prod_config
-API_TOKEN = '7478300229:AAHLO4zspS8IqyrmvCdqwTxLFVlR0lUIJmg'
-RECEIVER_CHAT_ID = -1002501401692
+API_TOKEN = '7478300229:AAE564apvxMdwm0kJF13M3chNpt7FsMewwY'
+RECEIVER_CHAT_ID = -1002570792329
 
 ALLOWED_CONTENT_TYPES = ['text', 'photo', 'voice', 'document', 'audio', 'video', 'video_note']
 
