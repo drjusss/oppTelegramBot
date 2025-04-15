@@ -4,14 +4,15 @@ import requests
 import urllib3
 
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
+DEBUG = False
 
-# test_config
-# API_TOKEN = '7478300229:AAE564apvxMdwm0kJF13M3chNpt7FsMewwY'
-# RECEIVER_CHAT_ID = 865222212
+if DEBUG:
+    API_TOKEN = '7478300229:AAE564apvxMdwm0kJF13M3chNpt7FsMewwY'
+    RECEIVER_CHAT_ID = 865222212
+else:
+    API_TOKEN = '7478300229:AAE564apvxMdwm0kJF13M3chNpt7FsMewwY'
+    RECEIVER_CHAT_ID = -1002570792329
 
-# prod_config
-API_TOKEN = '7478300229:AAE564apvxMdwm0kJF13M3chNpt7FsMewwY'
-RECEIVER_CHAT_ID = -1002570792329
 
 ALLOWED_CONTENT_TYPES = ['text', 'photo', 'voice', 'document', 'audio', 'video', 'video_note']
 
